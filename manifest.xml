@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>0aaaaaa9-1e1d-406e-9a91-abdb697771a9</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>NoOne</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Basic Addin">
+  </DisplayName>
+  <Description DefaultValue="Basic addin description"/>
+  <IconUrl DefaultValue="http://localhost:8080/assets/fire-32.png"/>
+  <HighResolutionIconUrl DefaultValue="http://localhost:8080/assets/fire-64.png"/>
+  <SupportUrl DefaultValue="https://www.microsoft.com/"/>
+  <AppDomains>
+    <AppDomain>https://www.microsoft.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="http://localhost:8080/src/commands/commands.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <FunctionFile resid="Commands.Url" />
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="MyTab1">
+              <Group id="FirstGroup">
+                <Label resid="FirstGroup.Label" />
+                <Icon>
+                  <bt:Image size="16" resid="Sandbox.16x16" />
+                  <bt:Image size="32" resid="Sandbox.32x32" />
+                  <bt:Image size="80" resid="Sandbox.80x80" />
+                </Icon>
+				
+                <Control xsi:type="Button" id="SandboxButton">
+                  <Label resid="SandboxButton.Label" />
+                  <Supertip>
+                    <Title resid="SandboxButton.Label" />
+                    <Description resid="SandboxButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Sandbox.16x16" />
+                    <bt:Image size="32" resid="Sandbox.32x32" />
+                    <bt:Image size="80" resid="Sandbox.80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Sandbox.Url" />
+                  </Action>
+                  <Enabled>true</Enabled>
+                </Control>
+
+                				
+                <Control xsi:type="Button" id="Sandbox2Button">
+                  <Label resid="Sandbox2Button.Label" />
+                  <Supertip>
+                    <Title resid="Sandbox2Button.Label" />
+                    <Description resid="Sandbox2Button.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Sandbox.16x16" />
+                    <bt:Image size="32" resid="Sandbox.32x32" />
+                    <bt:Image size="80" resid="Sandbox.80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId2</TaskpaneId>
+                    <SourceLocation resid="Sandbox2.Url" />
+                  </Action>
+                  <Enabled>true</Enabled>
+                </Control>
+				
+                </Group>
+              <Label resid="MyTab1.Label" />
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="http://localhost:8080/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="http://localhost:8080/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="http://localhost:8080/assets/icon-80.png"/>
+        <bt:Image id="Sandbox.16x16" DefaultValue="http://localhost:8080/assets/sandbox-16.png"/>
+        <bt:Image id="Sandbox.32x32" DefaultValue="http://localhost:8080/assets/sandbox-32.png"/>
+        <bt:Image id="Sandbox.80x80" DefaultValue="http://localhost:8080/assets/sandbox-80.png"/>
+        <bt:Image id="Sandbox2.16x16" DefaultValue="http://localhost:8080/assets/sandbox2-16.png"/>
+        <bt:Image id="Sandbox2.32x32" DefaultValue="http://localhost:8080/assets/sandbox2-32.png"/>
+        <bt:Image id="Sandbox2.80x80" DefaultValue="http://localhost:8080/assets/sandbox2-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
+        <bt:Url id="Commands.Url" DefaultValue="http://localhost:8080/src/commands/commands.html" />
+        <bt:Url id="Sandbox.Url" DefaultValue="http://localhost:8080/src/sandbox/sandbox.html" />
+        <bt:Url id="Sandbox2.Url" DefaultValue="http://localhost:8080/src/sandbox2/sandbox2.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="SandboxButton.Label" DefaultValue="Highligh pane" />
+        <bt:String id="Sandbox2Button.Label" DefaultValue="Interval update pane" />
+		
+        <bt:String id="GetStarted.Title" DefaultValue="The sample add-in is loaded!" />
+        <bt:String id="MyTab1.Label" DefaultValue="Sample Addin" />
+        <bt:String id="FirstGroup.Label" DefaultValue="Example Group" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="Dev-mode ON!" />
+        <bt:String id="SandboxButton.Tooltip" DefaultValue="Click to Show the Sandbox" />
+        <bt:String id="Sandbox2Button.Tooltip" DefaultValue="Click to Show the Sandbox2" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

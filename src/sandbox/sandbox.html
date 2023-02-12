@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Excel Add-In with Commands Sample</title>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <link href="sandbox.css" rel="stylesheet" type="text/css" />
+    <script src="sandbox.js" type="text/javascript"></script>
+
+    <!-- For the Office UI Fabric, go to https://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+    
+    <!-- To enable the offline use of Office UI Fabric, use: -->
+    <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
+    <!-- link rel="stylesheet" href="Content/fabric.components.min.css" -->
+</head>
+<body>
+    <div id="content-main">
+        <div class="padding">
+            <br />
+            <div class="ms-font-xxl ms-fontColor-neutralSecondary ms-fontWeight-semilight">Addin Sandbox</div>
+            <br /><br />
+            <div class="ms-font-xl ms-fontColor-neutralTertiary">Run your experiments here in a simple environment</div>
+            <br /><br />
+
+            <button class="ms-Button ms-Button--primary" id="highlight-button">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label" id="button-text"></span>
+                <span class="ms-Button-description" id="button-desc"></span>
+            </button>
+
+            <br /><br />
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="ms-Grid ms-bgColor-themeSecondary">
+            <div class="ms-Grid-row">
+                <div class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12"> <div class="ms-font-xl ms-fontColor-white">Keep it simple</div></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
